@@ -1,0 +1,75 @@
+
+Background.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: xy
+Layer0Brown
+  rotate: false
+  xy: 1, 1397
+  size: 1440, 512
+  orig: 1440, 512
+  offset: 0, 0
+  index: -1
+Layer1Green
+  rotate: false
+  xy: 1, 1139
+  size: 1440, 256
+  orig: 1440, 256
+  offset: 0, 0
+  index: -1
+Layer2Green
+  rotate: false
+  xy: 1, 881
+  size: 1440, 256
+  orig: 1440, 256
+  offset: 0, 0
+  index: -1
+Layer3Green
+  rotate: false
+  xy: 1, 623
+  size: 1440, 256
+  orig: 1440, 256
+  offset: 0, 0
+  index: -1
+Layer4Buildings
+  rotate: false
+  xy: 1, 365
+  size: 1440, 256
+  orig: 1440, 256
+  offset: 0, 0
+  index: -1
+Cloud1
+  rotate: false
+  xy: 1443, 1653
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Cloud2
+  rotate: false
+  xy: 1, 107
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Cloud3
+  rotate: false
+  xy: 1443, 1395
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Cloud4
+  rotate: false
+  xy: 1701, 1653
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Box
+  rotate: false
+  xy: 1, 1
+  size: 152, 104
+  orig: 152, 104
+  offset: 0, 0
+  index: -1

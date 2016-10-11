@@ -1,16 +1,12 @@
 package com.hypernirmo.game.screens;
 
-import java.util.Iterator;
-
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Pixmap;
-import com.badlogic.gdx.graphics.Pixmap.Format;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.Texture.TextureFilter;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
@@ -35,28 +31,25 @@ import com.hypernirmo.game.HyperNirmoGame;
 import com.hypernirmo.game.objects.Background;
 import com.hypernirmo.game.objects.BackgroundItem;
 
+import java.util.Iterator;
+
 public class AboutScreen implements Screen {
-
-    private HyperNirmoGame mGame;
-    private OrthographicCamera mAboutCam;
-    private FitViewport mViewport;
-
-    private Stage mStage;
-    private Table mTable;
-    private Skin mSkin;
-
-    private ShapeRenderer mShapeRenderer;
-    private SpriteBatch mSpriteBatch;
-
-    private Background mBackground;
-
-    private Array<TextureRegion> mCloudTextures;
-    private Array<Sprite> mClouds;
-    private int mCloudSpawnTimer;
 
     private static final int CLOUD_SPAWN_LOCATION = 1080;
     private static final int CLOUD_SPAWN_POINT = 1000;
     private static final float CLOUD_SPEED_MODIFIER = 10f;
+    private HyperNirmoGame mGame;
+    private OrthographicCamera mAboutCam;
+    private FitViewport mViewport;
+    private Stage mStage;
+    private Table mTable;
+    private Skin mSkin;
+    private ShapeRenderer mShapeRenderer;
+    private SpriteBatch mSpriteBatch;
+    private Background mBackground;
+    private Array<TextureRegion> mCloudTextures;
+    private Array<Sprite> mClouds;
+    private int mCloudSpawnTimer;
 
     public AboutScreen(HyperNirmoGame hyperNirmoGame) {
 

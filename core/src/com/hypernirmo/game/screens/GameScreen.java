@@ -7,7 +7,6 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.Pixmap.Format;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.Interpolation;
 import com.badlogic.gdx.scenes.scene2d.Action;
@@ -15,13 +14,9 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.actions.AlphaAction;
 import com.badlogic.gdx.scenes.scene2d.actions.SequenceAction;
-import com.badlogic.gdx.scenes.scene2d.ui.Button;
+import com.badlogic.gdx.scenes.scene2d.ui.*;
 import com.badlogic.gdx.scenes.scene2d.ui.Button.ButtonStyle;
-import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle;
-import com.badlogic.gdx.scenes.scene2d.ui.Image;
-import com.badlogic.gdx.scenes.scene2d.ui.Skin;
-import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.hypernirmo.game.HyperNirmoGame;
@@ -102,9 +97,9 @@ public class GameScreen implements Screen {
         speedLabel = new Label("Speed: " + mGame.mGameManager.getDisplayableSpeed(), smallLabelStyle);
 
         //Add lables to table
-        guiTable.add(scoreLabel).padLeft(35).padBottom(20);
-        guiTable.add(highScoreLabel).padLeft(35).padBottom(10);
-        guiTable.add(speedLabel).padLeft(35).padBottom(10);
+        guiTable.add(scoreLabel).padLeft(35).padTop(20);
+        guiTable.add(highScoreLabel).padLeft(35).padTop(25);
+        guiTable.add(speedLabel).padLeft(35).padTop(25);
 
         //Create buttonstyle
         ButtonStyle pauseStyle = new ButtonStyle();

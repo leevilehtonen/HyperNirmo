@@ -3,7 +3,7 @@ package com.hypernirmo.game.screens;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.graphics.GL30;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Pixmap;
 import com.badlogic.gdx.graphics.Texture;
@@ -34,27 +34,21 @@ import java.util.Iterator;
 
 public class MenuScreen implements Screen{
 
-    private HyperNirmoGame mGame;
-
-    private OrthographicCamera mCamera;
-    private FitViewport mViewport;
-
-    private Stage mStage;
-    private Table mTable;
-    private Skin mSkin;
-
-    private ShapeRenderer mShapeRenderer;
-    private SpriteBatch mSpriteBatch;
-
-    private Background mBackground;
-
-    private Array<TextureRegion> mCloudTextures;
-    private Array<Sprite> mClouds;
-    private int mCloudSpawnTimer;
-
     private static final int CLOUD_SPAWN_LOCATION = 1080;
     private static final int CLOUD_SPAWN_POINT = 1000;
     private static final float CLOUD_SPEED_MODIFIER = 10f;
+    private HyperNirmoGame mGame;
+    private OrthographicCamera mCamera;
+    private FitViewport mViewport;
+    private Stage mStage;
+    private Table mTable;
+    private Skin mSkin;
+    private ShapeRenderer mShapeRenderer;
+    private SpriteBatch mSpriteBatch;
+    private Background mBackground;
+    private Array<TextureRegion> mCloudTextures;
+    private Array<Sprite> mClouds;
+    private int mCloudSpawnTimer;
 
     public MenuScreen(HyperNirmoGame hyperNirmoGame) {
 
@@ -69,7 +63,7 @@ public class MenuScreen implements Screen{
         //Load assets
         mGame.mAssetsManager.loadBackground();
         mGame.mAssetsManager.loadFonts();
-        mGame.mAssetsManager.unloadSounds();
+        mGame.mAssetsManager.loadSounds();
         mGame.mAssetsManager.loadUIElements();
 
         //Create a new stage
@@ -290,10 +284,10 @@ public class MenuScreen implements Screen{
 
             //Clear screen
             Gdx.gl.glClearColor(0, 0, 0, 1);
-            Gdx.gl.glClear(GL30.GL_COLOR_BUFFER_BIT | GL30.GL_DEPTH_BUFFER_BIT);
+            Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
 
             //Render background
-            mShapeRenderer.begin();
+            mShapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
             mShapeRenderer.setColor(221.0f / 255.0f, 250.0f / 255.0f, 255.0f / 255.0f, 1f);
             mShapeRenderer.rect(0, 0, mGame.WIDTH, mGame.HEIGHT);
             mShapeRenderer.end();
