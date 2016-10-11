@@ -1,1 +1,1 @@
-This folder contains screenshots and banner for readmme.md.
+This folder contains screenshots and banner for readme.md.
